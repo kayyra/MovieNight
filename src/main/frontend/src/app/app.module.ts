@@ -8,6 +8,16 @@ import { FormregisterComponent } from './Inscriptions/formregister/formregister.
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { NavComponent } from './shared/nav/nav.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { LiloystitchComponent } from './views/liloystitch/liloystitch.component';
+import { PlayComponent } from './views/play/play.component';
+import { IntimeComponent } from './views/intime/intime.component';
+import { FavoritesComponent } from './views/favorites/favorites.component';
+import { DungeonsandragonsComponent } from './views/dungeonsandragons/dungeonsandragons.component';
+import { CardComponent } from './views/card/card.component';
+import { BarbieComponent } from './views/barbie/barbie.component';
+import { FreeguyComponent } from './views/freeguy/freeguy.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +26,17 @@ import { NavComponent } from './shared/nav/nav.component';
     FormregisterComponent,
     FooterComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    DashboardComponent,
+    ContactComponent,
+    LiloystitchComponent,
+    PlayComponent,
+    IntimeComponent,
+    FavoritesComponent,
+    DungeonsandragonsComponent,
+    CardComponent,
+    BarbieComponent,
+    FreeguyComponent
   ],
   imports: [
     BrowserModule,
