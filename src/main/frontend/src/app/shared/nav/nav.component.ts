@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-
+  closeMenu() {
+    const menuToggle = document.getElementById('menu-toggle') as HTMLInputElement;
+    menuToggle.checked = false;
+  }
 }
