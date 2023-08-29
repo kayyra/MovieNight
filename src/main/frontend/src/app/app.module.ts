@@ -13,13 +13,13 @@ import { ContactComponent } from './views/contact/contact.component';
 import { LiloystitchComponent } from './views/liloystitch/liloystitch.component';
 import { PlayComponent } from './views/play/play.component';
 import { IntimeComponent } from './views/intime/intime.component';
-import { FavoritesComponent } from './views/favorites/favorites.component';
 import { DungeonsandragonsComponent } from './views/dungeonsandragons/dungeonsandragons.component';
 import { CardComponent } from './views/card/card.component';
 import { BarbieComponent } from './views/barbie/barbie.component';
 import { FreeguyComponent } from './views/freeguy/freeguy.component';
 import { PlayerComponent } from './modules/player/player.component';
 import { SocialmediaComponent } from './shared/socialmedia/socialmedia.component';
+import { FavoriteComponent } from './views/favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +34,13 @@ import { SocialmediaComponent } from './shared/socialmedia/socialmedia.component
     LiloystitchComponent,
     PlayComponent,
     IntimeComponent,
-    FavoritesComponent,
     DungeonsandragonsComponent,
     CardComponent,
     BarbieComponent,
     FreeguyComponent,
     PlayerComponent,
-    SocialmediaComponent
+    SocialmediaComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
