@@ -1,0 +1,41 @@
+.play-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .selected-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .movie-details {
+    margin-top: 20px;
+    display: none; 
+    text-align: center;
+  
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  button {
+    background: rgb(57,72,103);
+    background: linear-gradient(0deg, rgba(57,72,103,0.53) 0%, rgba(57,72,103,0.86) 100%);
+    color: #fff;
+    border: none;
+    margin-left: 10rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+  }
+  
+  .start-button:hover {
+    background-color: #8dafd3;
+  }
+  

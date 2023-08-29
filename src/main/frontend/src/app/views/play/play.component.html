@@ -1,1 +1,8 @@
-<p>play works!</p>
+<app-header></app-header>
+<div class="card-container">
+  <app-card *ngFor="let card of cards" [movie]="card.movieCover"></app-card>
+</div>
+
+<button class="start-button" (click)="shuffleCards()">Play</button>
+
+<app-footer></app-footer>
