@@ -1,1 +1,40 @@
-<p>intime works!</p>
+<div class="container">
+    <img src="/assets/img/intime.jpg" alt="">
+    <div class="music-container">
+        <div class="speaker">
+            <img src="/assets/img/speaker.png" alt="Altavoz" (click)="toggleMusic()">
+            <audio #audioPlayer controls autoplay loop>
+                <source src="intime-music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="favorite-container">
+            <i class="heart-icon" (click)="toggleFavorite()"></i>
+        </div>
+        <div class="share-container">     
+            <span class="iconify" data-icon="skill-icons:instagram" (click)="shareOnSocialMedia('instagram')"></span>
+            <span class="iconify" data-icon="devicon:twitter" (click)="shareOnSocialMedia('twitter')"></span>
+            <span class="iconify" data-icon="logos:facebook" (click)="shareOnSocialMedia('facebook')"></span>        
+        </div>
+    </div>
+    <header>
+        <h1>Time-Traveler's Feast</h1>
+        <p>Experience a culinary journey through time with flavors inspired by "Intime"</p>
+    </header>
+    <div class="course">
+        <h2>Appetizer: Temporal Tidbits</h2>
+        <p>Indulge in bites of the past and future with a platter of temporal tidbits.</p>
+    </div>
+    <div class="course">
+        <h2>Main Course: Quantum Pasta</h2>
+        <p>Enjoy a plate of pasta intertwined with flavors from different eras, creating a fusion of taste.</p>
+    </div>
+    <div class="course">
+        <h2>Dessert: Eternity Éclair</h2>
+        <p>Savor a light éclair filled with sweet memories and a touch of timeless chocolate.</p>
+    </div>
+    <div class="course">
+        <h2>Cocktail: Chrono Cooler</h2>
+        <p>Quench your thirst with a mesmerizing cocktail that swirls colors and flavors from different epochs.</p>
+    </div>
+</div>

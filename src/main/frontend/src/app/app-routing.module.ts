@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: 'barbie', component:BarbieComponent},
   {path: 'intime', component: IntimeComponent},
   {path: 'freeguy', component:FreeguyComponent},
-  {path: 'freeguy', component:DungeonsandragonsComponent},
+  {path: 'dungeonsanddragons', component:DungeonsandragonsComponent},
 ];
 
 @NgModule({
