@@ -18,6 +18,7 @@ import { DungeonsandragonsComponent } from './views/dungeonsandragons/dungeonsan
 import { CardComponent } from './views/card/card.component';
 import { BarbieComponent } from './views/barbie/barbie.component';
 import { FreeguyComponent } from './views/freeguy/freeguy.component';
+import { PlayerComponent } from './modules/player/player.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FreeguyComponent } from './views/freeguy/freeguy.component';
     DungeonsandragonsComponent,
     CardComponent,
     BarbieComponent,
-    FreeguyComponent
+    FreeguyComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,

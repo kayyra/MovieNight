@@ -12,15 +12,6 @@ export class IntimeComponent {
 
   constructor() {}
 
-  toggleMusic() {
-    const audioPlayer = this.audioPlayer.nativeElement;
-    if (this.isMusicPlaying) {
-      audioPlayer.pause();
-    } else {
-      audioPlayer.play();
-    }
-    this.isMusicPlaying = !this.isMusicPlaying;
-  }
 
   toggleFavorite() {
     this.isFavorite = !this.isFavorite;
