@@ -3,11 +3,7 @@
         <div class="favorite-container">
             <i class="heart-icon" (click)="toggleFavorite()"></i>
         </div>
-        <div class="share-container">     
-            <span class="iconify" data-icon="skill-icons:instagram" (click)="shareOnSocialMedia('instagram')"></span>
-            <span class="iconify" data-icon="devicon:twitter" (click)="shareOnSocialMedia('twitter')"></span>
-            <span class="iconify" data-icon="logos:facebook" (click)="shareOnSocialMedia('facebook')"></span>        
-        </div>       
+        <app-socialmedia></app-socialmedia> 
     </div>
     <header>
         <h1>Time-Traveler's Feast</h1>

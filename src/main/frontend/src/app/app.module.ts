@@ -19,6 +19,7 @@ import { CardComponent } from './views/card/card.component';
 import { BarbieComponent } from './views/barbie/barbie.component';
 import { FreeguyComponent } from './views/freeguy/freeguy.component';
 import { PlayerComponent } from './modules/player/player.component';
+import { SocialmediaComponent } from './shared/socialmedia/socialmedia.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { PlayerComponent } from './modules/player/player.component';
     CardComponent,
     BarbieComponent,
     FreeguyComponent,
-    PlayerComponent
+    PlayerComponent,
+    SocialmediaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,11 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-liloystitch',
-  templateUrl: './liloystitch.component.html',
-  styleUrls: ['./liloystitch.component.scss']
+  selector: 'app-socialmedia',
+  templateUrl: './socialmedia.component.html',
+  styleUrls: ['./socialmedia.component.scss']
 })
-export class LiloystitchComponent {
-  @ViewChild('audioPlayer', { static: true }) audioPlayer!: ElementRef;
-  isMusicPlaying: boolean = true;
-  isFavorite: boolean = false;
-
-  constructor() {}
-
-
-  toggleFavorite() {
-    this.isFavorite = !this.isFavorite;
-  }
-
+export class SocialmediaComponent {
   shareOnSocialMedia(platform: string) {
     const urlToShare = 'https://movienight.com';
 

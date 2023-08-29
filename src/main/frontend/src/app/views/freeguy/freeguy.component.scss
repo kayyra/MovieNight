@@ -1,0 +1,37 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+
+    img{
+        width: 379px;
+        height: 454px;
+    }
+}
+
+header {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.course {
+    border: 2px solid #224ccb;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #72acc5;
+}
+
+h1 {
+    color: #224ccb;
+}
+
+h2 {
+    color: #224ccb;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
