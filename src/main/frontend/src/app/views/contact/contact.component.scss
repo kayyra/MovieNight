@@ -1,0 +1,41 @@
+.card{
+    margin-top: 40px;
+    z-index: 1;
+}
+
+
+p{
+    margin-top: -45px;
+}
+
+input, textarea{
+    font-family: 'Comfortaa', cursive;
+    margin: 0 0 10px 30px;
+}
+
+input{
+    width: 247px;
+    height: 29px;
+    border-radius: 28px;
+}
+
+textarea{
+    width: 247px;
+    height: 85px;
+    border-radius: 15px;
+    
+}
+
+.start-button {
+    background: rgb(57,72,103);
+    background: linear-gradient(0deg, rgba(57,72,103,0.53) 0%, rgba(57,72,103,0.86) 100%);
+    color: #fff;
+    border: none;
+    margin-left: 0.5rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+}
+  
