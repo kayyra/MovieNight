@@ -20,10 +20,5 @@ toggleSound(){
   }
   this.isMuted = !this.isMuted;
 }
-  play() {
-    const audio = new Audio('/assets/audio/Intime.mp3');
-    audio.play();
-  }
-  
-  
+   
 }

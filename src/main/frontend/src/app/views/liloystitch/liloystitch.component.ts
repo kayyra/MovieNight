@@ -6,29 +6,18 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./liloystitch.component.scss']
 })
 export class LiloystitchComponent {
-  @ViewChild('audioPlayer', { static: true }) audioPlayer!: ElementRef;
-  isMusicPlaying: boolean = true;
-  isFavorite: boolean = false;
+  @ViewChild('audioPlayer', { static: true }) audioPlayer!: ElementRef; 
+isMuted: boolean =false;
 
-  constructor() {}
+constructor() {}
 
-
-  toggleFavorite() {
-    this.isFavorite = !this.isFavorite;
+toggleSound(){
+  const audioPlayer = this.audioPlayer.nativeElement;
+  if(this.isMuted){
+    audioPlayer.play();
+  }else{
+    audioPlayer.pause();
   }
-
-  shareOnSocialMedia(platform: string) {
-    const urlToShare = 'https://movienight.com';
-
-    switch (platform) {
-      case 'facebook':
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}` , '_blank');
-        break;
-        case 'twitter':
-        window.open(`https://www.twitter.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}` , '_blank');
-        break;
-        case 'instagram':
-          window.open(`https://www.instagram.com/sharer/sharer.php?u=${encodeURIComponent(urlToShare)}` , '_blank');
-    }
-  }
+  this.isMuted = !this.isMuted;
+}
 }
