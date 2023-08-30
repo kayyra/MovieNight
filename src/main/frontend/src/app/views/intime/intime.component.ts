@@ -6,9 +6,21 @@ import { Component, ElementRef,Input,Output,ViewChild } from '@angular/core';
   styleUrls: ['./intime.component.scss']
 })
 export class IntimeComponent {
-  
+  @ViewChild('audioPlayer', { static: true }) audioPlayer!: ElementRef; 
+isMuted: boolean =false;
 
-  reproducir() {
+constructor() {}
+
+toggleSound(){
+  const audioPlayer = this.audioPlayer.nativeElement;
+  if(this.isMuted){
+    audioPlayer.play();
+  }else{
+    audioPlayer.pause();
+  }
+  this.isMuted = !this.isMuted;
+}
+  play() {
     const audio = new Audio('/assets/audio/Intime.mp3');
     audio.play();
   }
