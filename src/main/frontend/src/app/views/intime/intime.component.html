@@ -1,10 +1,20 @@
 <div class="container">
     <img src="/assets/img/intime.jpg" alt="">   
+        
+        <app-socialmedia></app-socialmedia>
+       
+        <div class="audio">
+           <a (click)="reproducir()"> 
+            <img src="/assets/img/speaker.png" alt="Speaker">
+            <img src="/assets/img/muted.png" alt="Muted">
+        </a>
         <div class="favorite-container">
-            <i class="heart-icon" (click)="toggleFavorite()"></i>
-        </div>
-        <app-socialmedia></app-socialmedia> 
-    </div>
+            <a><span class="iconify" id="heart" data-icon="solar:heart-broken"></span></a>            
+        </div>        
+        <audio class="none" controls src="assets/audio/Intime.mp3" type="audio/mp3">
+            your browser does not support the audio element.
+        </audio>
+        </div> 
     <header>
         <h1>Time-Traveler's Feast</h1>
         <p>Experience a culinary journey through time with flavors inspired by "Intime"</p>
