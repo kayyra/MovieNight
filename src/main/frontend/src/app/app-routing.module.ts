@@ -12,6 +12,7 @@ import { IntimeComponent } from './views/intime/intime.component';
 import { FreeguyComponent } from './views/freeguy/freeguy.component';
 import { DungeonsandragonsComponent } from './views/dungeonsandragons/dungeonsandragons.component';
 import { FavoriteComponent } from './views/favorite/favorite.component';
+import { HarrypotterComponent } from './views/harrypotter/harrypotter.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'/login', pathMatch:'full'},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'intime', component: IntimeComponent},
   {path: 'freeguy', component:FreeguyComponent},
   {path: 'dungeonsanddragons', component:DungeonsandragonsComponent},
+  {path: 'harrypotter', component: HarrypotterComponent}
 ];
 
 @NgModule({

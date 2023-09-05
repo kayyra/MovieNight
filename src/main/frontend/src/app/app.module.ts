@@ -20,6 +20,7 @@ import { FreeguyComponent } from './views/freeguy/freeguy.component';
 
 import { SocialmediaComponent } from './shared/socialmedia/socialmedia.component';
 import { FavoriteComponent } from './views/favorite/favorite.component';
+import { HarrypotterComponent } from './views/harrypotter/harrypotter.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { FavoriteComponent } from './views/favorite/favorite.component';
     BarbieComponent,
     FreeguyComponent,
     SocialmediaComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    HarrypotterComponent
   ],
   imports: [
     BrowserModule,
