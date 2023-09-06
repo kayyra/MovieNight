@@ -1,4 +1,4 @@
-package com.moviesnight.MoviesNight.Models;
+package com.moviesnight.MovieNight.Models;
 
 import jakarta.persistence.*;
 
