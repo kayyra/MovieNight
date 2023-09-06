@@ -1,10 +1,6 @@
 package com.moviesnight.MoviesNight.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "login_form")
@@ -14,7 +10,10 @@ public class user {
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Long id;
   
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
    
     public Long getId() {
@@ -22,8 +21,8 @@ public class user {
     }
     public void setId(Long id) {
         this.id = id;
-    }
-   
+    }   
+    
     public String getEmail() {
         return email;
     }

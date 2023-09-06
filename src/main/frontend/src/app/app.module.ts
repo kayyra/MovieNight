@@ -21,6 +21,7 @@ import { FreeguyComponent } from './views/freeguy/freeguy.component';
 import { SocialmediaComponent } from './shared/socialmedia/socialmedia.component';
 import { FavoriteComponent } from './views/favorite/favorite.component';
 import { HarrypotterComponent } from './views/harrypotter/harrypotter.component';
+import { FavoriteService } from './service/favorite.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { HarrypotterComponent } from './views/harrypotter/harrypotter.component'
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FavoriteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

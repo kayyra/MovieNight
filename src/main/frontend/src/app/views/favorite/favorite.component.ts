@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FavoritesService } from 'src/app/service/favorites.service';
+import { FavoriteService } from 'src/app/service/favorite.service';
 
 @Component({
   selector: 'app-favorite',
@@ -7,16 +7,13 @@ import { FavoritesService } from 'src/app/service/favorites.service';
   styleUrls: ['./favorite.component.scss']
 })
 export class FavoriteComponent {
-favorites: any[] = [];
-constructor(private favoritesService: FavoritesService){}
- ngOnInit():void {
-  this.favorites = this.favoritesService.getFavorites();
- }
- addFavorite(item: any){
-  this.favoritesService.addFavorite(item);
- }
- removeFavorite(item: any){
-  this.favoritesService.removeFavorites(item);
- }
+  
+  constructor(private favoriteService: FavoriteService){}
 
-}
+  // get favoriteCards(): string[] {
+  //   return this.favoriteService.getFavorites().subscribe((cards) =>{
+  //     this.favoriteCards = cards;
+  //   });
+  }
+
+
