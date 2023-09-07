@@ -8,6 +8,21 @@
     margin-right: 10px;
   }
   
+  // .card-body{
+    // video{
+    //   width: 100%;
+    //   height: auto;
+    //   filter: grayscale(90%);
+    // }
+  // }
+
+  .film{
+    img{
+      width: 100%;
+    }
+  }
+  
+
   
   @media (min-width: 768px) {
     .gradient-form {
@@ -20,5 +35,6 @@
       border-top-right-radius: .3rem;
       border-bottom-right-radius: .3rem;
     }
+
   }
   

@@ -46,7 +46,7 @@ import { FavoriteService } from './service/favorite.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [FavoriteService],
   bootstrap: [AppComponent]
