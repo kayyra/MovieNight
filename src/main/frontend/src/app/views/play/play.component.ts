@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Movie } from '../../model/movie.model';
 
 @Component({
   selector: 'app-play',
@@ -7,11 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./play.component.scss']
 })
 export class PlayComponent {
+
+
   cards: any[] = [
     { title: 'Lilo & Stitch', movieCover: 'assets/img/lilo&stitch.jpg', flipped: false },
     { title: 'Free Guy', movieCover: 'assets/img/freeguy.jpg', flipped: false },
     { title: 'Barbie', movieCover: 'assets/img/barbie.jpg', flipped: false },
-    { title: 'Dungeons & Dragons', movieCover: 'assets/img/dungeons&dragons.jpg', flipped: false }
+    { title: 'Dungeons & Dragons', movieCover: 'assets/img/dungeons&dragons.jpg', flipped: false },   
+    { title: 'Intime', movieCover: 'assets/img/intime.jpg', flipped: false },
+    { title: 'HarryPotter', movieCover: 'assets/img/harrypotter1.jpg', flipped: false }
+
   ];
   
   shuffledCards: any[] = [];

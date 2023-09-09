@@ -1,10 +1,8 @@
 <div class="card" [class.flipped]="flipped" (click)="flipCard()">
-    <div class="card-front">
-      <img src="/assets/img/bg.png">
-    </div>
-    <div class="card-back">
-      <img [src]="movie" alt="Card Back">
-    </div>
+  <div class="card-front">
+    <img [src]="movie" alt="Card Back">         
   </div>
-  
-  
+  <div class="card-back">
+    <img src="/assets/img/bg.png"> 
+  </div>
+</div>
