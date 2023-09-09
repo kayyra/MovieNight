@@ -90,6 +90,7 @@
         background: linear-gradient(0deg, rgba(57, 72, 103, 0.9682247899159664) 0%, rgba(57, 72, 103, 0.9009978991596639) 99%);
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
+        z-index:2;
   
         ul {
           flex-direction: column;

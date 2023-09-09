@@ -8,22 +8,15 @@
     margin-right: 10px;
   }
   
-  // .card-body{
-    // video{
-    //   width: 100%;
-    //   height: auto;
-    //   filter: grayscale(90%);
-    // }
-  // }
-
   .film{
-    img{
-      width: 100%;
-    }
+   img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+   }
+    
   }
-  
 
-  
   @media (min-width: 768px) {
     .gradient-form {
       height: 100vh !important;
