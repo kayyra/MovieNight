@@ -53,12 +53,6 @@ export class PlayComponent {
     }
   }
 
-  // onCardClicked(movie: Movie) {
-  //   if (!movie.isRevealed) {
-  //     movie.isRevealed = true;
-  //   }
-  // }
-
   shuffleCards() {
     this.shuffledCards = [...this.movies];
     for(let i = this.shuffleCards.length - 1; i > 0; i--){
@@ -68,13 +62,7 @@ export class PlayComponent {
 
     this.movies.forEach(movie => (movie.isRevealed = false));
   }
-    // this.shuffledCards = [...this.movies];
-    // for (let i = this.shuffledCards.length - 1; i > 0; i--) {
-    //   const j = Math.floor(Math.random() * (i + 1));
-    //   [this.shuffledCards[i], this.shuffledCards[j]] = [this.shuffledCards[j], this.shuffledCards[i]];
-    // }
     
-    // this.movies.forEach(movie => (movie.flipped = false));
   }
 
   

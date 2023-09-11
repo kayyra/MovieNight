@@ -22,6 +22,7 @@ import { SocialmediaComponent } from './shared/socialmedia/socialmedia.component
 import { FavoriteComponent } from './views/favorite/favorite.component';
 import { HarrypotterComponent } from './views/harrypotter/harrypotter.component';
 import { FavoriteService } from './service/favorite.service';
+import { BackComponent } from './shared/back/back.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { FavoriteService } from './service/favorite.service';
     FreeguyComponent,
     SocialmediaComponent,
     FavoriteComponent,
-    HarrypotterComponent
+    HarrypotterComponent,
+    BackComponent
   ],
   imports: [
     BrowserModule,
