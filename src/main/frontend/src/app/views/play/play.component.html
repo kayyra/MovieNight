@@ -1,7 +1,8 @@
 <app-header></app-header>
 <div class="movie-list">
-  <div *ngFor="let movie of movies" class="movie-card" (click)="onCardClicked(movie)">
+  <div *ngFor="let movie of movies" class="movie-card" (click)="onCardClick(movie)">
     <img [src]="movie.isRevealed ? movie.coverImage : '/assets/img/bg.png'" alt="Movie Cover">
+   
   </div>
 
 <button class="start-button" (click)="shuffleCards()">Play</button>
