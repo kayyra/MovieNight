@@ -1,39 +1,65 @@
-/* play.component.css */
-.play-board {
+.movie-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.play-card {
+.movie-card {
   width: 100px;
   height: 150px;
   margin: 10px;
   perspective: 1000px;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 10px;
+
 }
 
-.play-card-front,
-.play-card-back {
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+
+.front,
+.back {
   width: 100%;
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
-  transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-color: #fff;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.play-card-front {
-  transform: rotateY(0deg);
+.back {
+  transform: rotateY(180deg);
+  background-color: #ccc;
+  cursor: pointer;
 }
 
-.play-card-back {
+.flipped .card-inner {
   transform: rotateY(180deg);
 }
-
 button {
-  background: rgb(57,72,103);
-  background: linear-gradient(0deg, rgba(57,72,103,0.53) 0%, rgba(57,72,103,0.86) 100%);
+  background: rgb(57, 72, 103);
+  background: linear-gradient(0deg, rgba(57, 72, 103, 0.53) 0%, rgba(57, 72, 103, 0.86) 100%);
   color: #fff;
   border: none;
-  margin-left: 10rem;
+  margin: 0 auto;
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
@@ -44,65 +70,4 @@ button {
 .start-button:hover {
   background-color: #8dafd3;
 }
-
-
-
-// .card-container {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-
-// .card {
-//   width: 100px;
-//   height: 150px;
-//   margin: 10px;
-//   perspective: 1000px;
-//   cursor: pointer;
-// }
-
-// .card-inner {
-//   width: 100%;
-//   height: 100%;
-//   transition: transform 0.5s;
-//   transform-style: preserve-3d;
-// }
-
-// .front,
-// .back {
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-//   backface-visibility: hidden;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   font-size: 18px;
-//   background-color: #fff;
-// }
-
-// .back {
-//   transform: rotateY(180deg);
-//   background-color: #ccc;
-//   cursor: pointer;
-// }
-
-// .flipped .card-inner {
-//   transform: rotateY(180deg);
-// }
-// button {
-//   background: rgb(57,72,103);
-//   background: linear-gradient(0deg, rgba(57,72,103,0.53) 0%, rgba(57,72,103,0.86) 100%);
-//   color: #fff;
-//   border: none;
-//   margin-left: 10rem;
-//   padding: 10px 20px;
-//   border-radius: 4px;
-//   cursor: pointer;
-//   font-size: 16px;
-//   font-family: 'Cinzel', serif;
-// }
-
-// .start-button:hover {
-//   background-color: #8dafd3;
-// }
 

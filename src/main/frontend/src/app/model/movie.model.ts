@@ -5,5 +5,6 @@ export interface Movie {
     coverImage: string;     
     description: string;  
     isRevealed: boolean;
+    flipped: boolean;
   }
   

@@ -10,33 +10,37 @@ import { Movie } from '../../model/movie.model';
 export class PlayComponent {
 
 
-  cards: any[] = [
-    { title: 'Lilo & Stitch', movieCover: 'assets/img/lilo&stitch.jpg', flipped: false },
-    { title: 'Free Guy', movieCover: 'assets/img/freeguy.jpg', flipped: false },
-    { title: 'Barbie', movieCover: 'assets/img/barbie.jpg', flipped: false },
-    { title: 'Dungeons & Dragons', movieCover: 'assets/img/dungeons&dragons.jpg', flipped: false },   
-    { title: 'Intime', movieCover: 'assets/img/intime.jpg', flipped: false },
-    { title: 'HarryPotter', movieCover: 'assets/img/harrypotter1.jpg', flipped: false }
-
+  movies: Movie[] = [
+    { id: 1, name: 'Lilo & Stitch', coverImage: 'assets/img/lilo&stitch.jpg',description: 'Description 1', isRevealed: false, flipped: false  },
+    { id: 2, name: 'Free Guy', coverImage: 'assets/img/freeguy.jpg',description: 'Description 1', isRevealed: false, flipped: false },
+    { id: 3, name: 'Barbie', coverImage: 'assets/img/barbie.jpg',description: 'Description 1', isRevealed: false, flipped: false },
+    { id: 4, name: 'Dungeons & Dragons', coverImage: 'assets/img/dungeons&dragons.jpg',description: 'Description 1', isRevealed: false, flipped: false  },   
+    { id: 5, name: 'Intime', coverImage: 'assets/img/intime.jpg',description: 'Description 1', isRevealed: false, flipped: false  },
+    { id: 6, name: 'HarryPotter', coverImage: 'assets/img/harrypotter1.jpg',description: 'Description 1', isRevealed: false, flipped: false }
   ];
   
   shuffledCards: any[] = [];
 
   constructor(private router: Router) {}
 
-  ngOnInit(){
-  
-    this.shuffledCards = [...this.cards];
+  onCardClicked(movie: Movie) {
+    if (!movie.isRevealed) {
+      movie.isRevealed = true;
+    }
+  }
+
+  ngOnInit(){  
+    this.shuffledCards = [...this.movies];
   }
 
   shuffleCards() {
-    this.shuffledCards = [...this.cards];
+    this.shuffledCards = [...this.movies];
     for (let i = this.shuffledCards.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [this.shuffledCards[i], this.shuffledCards[j]] = [this.shuffledCards[j], this.shuffledCards[i]];
     }
     
-    this.cards.forEach(card => (card.flipped = false));
+    this.movies.forEach(movie => (movie.flipped = false));
   }
 
   onCardClick(card: any) {
