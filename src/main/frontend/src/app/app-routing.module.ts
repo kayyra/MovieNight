@@ -13,10 +13,11 @@ import { FreeguyComponent } from './views/freeguy/freeguy.component';
 import { DungeonsandragonsComponent } from './views/dungeonsandragons/dungeonsandragons.component';
 import { FavoriteComponent } from './views/favorite/favorite.component';
 import { HarrypotterComponent } from './views/harrypotter/harrypotter.component';
+import { AuthGuardService } from './service/auth.guard.service';
 
 const routes: Routes = [
   {path: '', redirectTo:'/login', pathMatch:'full'},
-  {path: 'dashboard', component:DashboardComponent},
+  {path: 'dashboard', component:DashboardComponent, canActivate: [AuthGuardService]},
   {path: 'login', component:FormloginComponent},
   {path: 'register', component:FormregisterComponent},
   {path: 'play', component:PlayComponent},  
