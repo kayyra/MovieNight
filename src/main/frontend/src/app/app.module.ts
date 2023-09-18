@@ -23,6 +23,7 @@ import { FavoriteComponent } from './views/favorite/favorite.component';
 import { HarrypotterComponent } from './views/harrypotter/harrypotter.component';
 import { FavoriteService } from './service/favorite.service';
 import { BackComponent } from './shared/back/back.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { BackComponent } from './shared/back/back.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

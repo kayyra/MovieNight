@@ -11,7 +11,7 @@
                 <h2 class="text-uppercase text-center mb-5">Send us a film</h2>
                 <p>Send us a movie proposal that you would like to see in our application!</p>
   
-                <form>
+                <form (ngSubmit)="onSubmit()">
                   <div class="form-outline mb-4">
                     <input type="text" id="form3Example1cg" class="form-control form-control-lg" placeholder="Name of film"/>
                   </div>
@@ -26,8 +26,8 @@
                   <textarea name="" id="" cols="30" rows="10" placeholder="Description of the film"></textarea>
     
                   <div class="d-flex justify-content-center">
-                    <button type="button"
-                      class="start-button" routerLink="">Submit</button>
+                    <button
+                      class="start-button"type="submit">Submit</button>
                   </div>
                 </form>
               </div>
