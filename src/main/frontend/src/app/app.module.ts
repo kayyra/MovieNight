@@ -24,6 +24,7 @@ import { HarrypotterComponent } from './views/harrypotter/harrypotter.component'
 import { FavoriteService } from './service/favorite.service';
 import { BackComponent } from './shared/back/back.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

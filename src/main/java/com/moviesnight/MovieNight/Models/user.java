@@ -1,28 +1,32 @@
 package com.moviesnight.MovieNight.Models;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-@Table(name = "login_form")
 public class user {
-    
-    @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @Id 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-  
-    @Column(name = "email")
+    private String username;
     private String email;
-
-    @Column(name = "password")
     private String password;
-   
+
+    
     public Long getId() {
         return id;
     }
     public void setId(Long id) {
         this.id = id;
-    }   
-    
+    }
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
     public String getEmail() {
         return email;
     }
@@ -35,5 +39,7 @@ public class user {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+
     
 }

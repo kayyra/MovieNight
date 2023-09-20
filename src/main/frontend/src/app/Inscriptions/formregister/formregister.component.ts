@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-formregister',
@@ -8,28 +10,37 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./formregister.component.scss']
 })
 export class FormregisterComponent {
-formData: FormGroup;
-  http: any;
+registrationForm!: FormGroup;
+showValidationMessage: boolean = false;
 
-constructor(private fb: FormBuilder){
-  this.formData = this.fb.group({    
-    username: [Validators.required],
-    password: ['', [Validators.required, Validators.pattern(/^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[a-z]).{8,}$/)]]    
+constructor(private fb: FormBuilder, private http: HttpClient, private route: Router){
+  this.registrationForm = this.fb.group({    
+    username: ['', [Validators.required, Validators.pattern('[A-Za-z]*')]],
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(8)]],
+    confirmPassword: ['', [Validators.required]]      
   });
 }
 
-onSubmit(): void {
-  if(this.formData.valid){
-    const registrationData = this.formData.value;
+  onSubmit(): void {   
+    
+    if (this.registrationForm.valid) {
+      const registrationData = this.registrationForm.value;
 
-    this.http.post('/api/register', registrationData).subscribe(
-      (response: any) =>{
-        console.log('Register successfully:', Response );
-      },
-      (error: any) =>{
-        console.error('Error during registration:', error);
-      }
-    );
+      this.http.post('/api/register', registrationData).subscribe(
+        (response: any) => {
+          console.log('Registro realizado con éxito!:', response);          
+          this.route.navigate(['/dashboard']);
+        },
+        (error: any) => {
+          console.error('Error durante el registro:', error);
+        }
+      );
+    }
+  
   }
 }
-}
+
+
+
+
